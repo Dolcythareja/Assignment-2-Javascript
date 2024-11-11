@@ -55,3 +55,6 @@ class Smoothie {
         return price.toFixed(2); 
     }
 }
+// Event listener for the form submission
+document.getElementById('smoothie-form').addEventListener('submit', function(event) {
+    event.preventDefault();
