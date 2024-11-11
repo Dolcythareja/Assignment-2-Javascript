@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Your Smoothie!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="images/what-to-order-at-the-smoothie-bar-01-pg-full.jpg" alt="Smoothie Bar" class="smoothie-image">
+        <h1>Order Your Smoothie!</h1>
+
+        <form id="smoothie-form">
+            <div class="form-section">
+                <label for="base">Choose your base:</label>
+                <select id="base" name="base">
+                    <option value="Coconut Milk">Coconut Milk</option>
+                    <option value="Rice Milk">Rice Milk</option>
+                    <option value="Cashew Milk">Cashew Milk</option>
+                    <option value="Coconut Water">Coconut Water</option>
+                    <option value="Greek Yogurt">Greek Yogurt</option>
+                </select>
+            </div>
+
+            <div class="form-section">
+                <label for="fruits">Choose your fruits:</label>
+                <select id="fruits" name="fruits" multiple>
+                    <option value="Papaya">Papaya</option>
+                    <option value="Watermelon">Watermelon</option>
+                    <option value="Apple">Apple</option>
+                    <option value="Peach">Peach</option>
+                    <option value="Cherry">Cherry</option>
+                </select>
+            </div>
+
+            <div class="form-section">
+                <label for="add-ins">Add-ins:</label>
+                <select id="add-ins" name="add-ins" multiple>
+                    <option value="Acai Powder">Acai Powder</option>
+                    <option value="Cocoa Nibs">Cocoa Nibs</option>
+                    <option value="Turmeric">Turmeric</option>
+                    <option value="Matcha">Matcha</option>
+                    <option value="Bee Pollen">Bee Pollen</option>
+                </select>
+            </div>
+
+            <div class="form-section">
+                <label for="size">Choose a size:</label>
+                <select id="size" name="size">
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                    <option value="Extra Large">Extra Large</option>
+                </select>
+            </div>
+
+            <button type="submit">Order Smoothie</button>
+        </form>
+
+        <!-- Predefined order summary structure -->
+        <div id="order-summary" class="order-summary" style="display:none;">
+            <h2>Your Smoothie Order</h2>
+            <ul>
+                <li><strong>Base:</strong> <span id="summary-base"></span></li>
+                <li><strong>Fruits:</strong> <span id="summary-fruits"></span></li>
+                <li><strong>Add-ins:</strong> <span id="summary-addins"></span></li>
+                <li><strong>Size:</strong> <span id="summary-size"></span></li>
+                <li><strong>Total Price:</strong> $<span id="summary-price"></span></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
