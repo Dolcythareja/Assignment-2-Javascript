@@ -76,4 +76,14 @@ document.getElementById('smoothie-form').addEventListener('submit', function(eve
 
     // Display the order summary
     document.getElementById('order-summary').style.display = 'block';
+    // Log the order summary and price for debugging
+    console.log('Order Summary:', {
+        base: smoothieOrder.base,
+        fruits: smoothieOrder.fruits,
+        addIns: smoothieOrder.addIns,
+        size: smoothieOrder.size,
+        price: smoothieOrder.calculatePrice()
+    });
+});
+
     
