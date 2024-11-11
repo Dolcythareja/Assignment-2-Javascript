@@ -58,3 +58,22 @@ class Smoothie {
 // Event listener for the form submission
 document.getElementById('smoothie-form').addEventListener('submit', function(event) {
     event.preventDefault();
+    // Get values from form fields
+    const base = document.getElementById('base').value;
+    const fruits = Array.from(document.getElementById('fruits').selectedOptions).map(option => option.value);
+    const addIns = Array.from(document.getElementById('add-ins').selectedOptions).map(option => option.value);
+    const size = document.getElementById('size').value;
+
+    // Instantiate a new Smoothie object
+    const smoothieOrder = new Smoothie(base, fruits, addIns, size);
+
+    // Update order summary content
+    document.getElementById('summary-base').textContent = smoothieOrder.base;
+    document.getElementById('summary-fruits').textContent = smoothieOrder.fruits.join(', ');
+    document.getElementById('summary-addins').textContent = smoothieOrder.addIns.join(', ');
+    document.getElementById('summary-size').textContent = smoothieOrder.size;
+    document.getElementById('summary-price').textContent = smoothieOrder.calculatePrice();
+
+    // Display the order summary
+    document.getElementById('order-summary').style.display = 'block';
+    
