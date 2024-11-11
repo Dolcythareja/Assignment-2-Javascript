@@ -14,6 +14,8 @@ class Smoothie {
         let price = 0;
 
         // Base price based on the type of base
+        // Attribution for Switch Statement Structure:
+        // JavaScript.info - https://javascript.info/switch
         switch (this.base) {
             case 'Coconut Milk':
             case 'Rice Milk':
@@ -59,6 +61,9 @@ class Smoothie {
 document.getElementById('smoothie-form').addEventListener('submit', function(event) {
     event.preventDefault();
     // Get values from form fields
+
+     // Attribution for DOM Value Retrieval and Array.from():
+    // JavaScript.info - https://javascript.info/array-methods
     const base = document.getElementById('base').value;
     const fruits = Array.from(document.getElementById('fruits').selectedOptions).map(option => option.value);
     const addIns = Array.from(document.getElementById('add-ins').selectedOptions).map(option => option.value);
